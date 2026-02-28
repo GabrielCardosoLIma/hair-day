@@ -16,7 +16,10 @@ export const datePickerVariantsContainer = cva(
 export const datePickerVariantsIcon = cva("size-5 fill-yellow");
 
 export const datePickerVariantsInput = cva(
-  "scheme-dark cursor-pointer w-full outline-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-inner-spin-button]:hidden [&::-webkit-outer-spin-button]:hidden"
+  `
+    scheme-dark cursor-pointer w-full outline-none [&::-webkit-calendar-picker-indicator]:hidden 
+    [&::-webkit-inner-spin-button]:hidden [&::-webkit-outer-spin-button]:hidden
+  `
 );
 
 interface DatePickerProps
