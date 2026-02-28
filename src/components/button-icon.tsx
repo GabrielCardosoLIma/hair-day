@@ -5,7 +5,7 @@ import { Icon } from "./icon";
 export const buttonIconContainerVariants = cva(
   `
       inline-flex items-center justify-center cursor-pointer 
-      transition-colors group bg-transparent border-0 size-8
+      transition-colors group bg-transparent border-0 size-4
     `
 );
 
