@@ -4,7 +4,8 @@ import { TextInput } from "./components/text-input";
 import { ButtonIcon } from "./components/button-icon";
 
 import UserSquare from "./assets/icons/user-square.svg?react";
-import TrashIcon  from "./assets/icons/trash.svg?react";
+import TrashIcon from "./assets/icons/trash.svg?react";
+import { TimeSelect } from "./components/time-select";
 
 export function App() {
   return (
@@ -39,6 +40,12 @@ export function App() {
 
         <div>
           <ButtonIcon icon={TrashIcon} />
+        </div>
+
+        <div className="flex gap-2">
+          <TimeSelect>10:00</TimeSelect>
+          <TimeSelect selected>10:00</TimeSelect>
+          <TimeSelect disabled>10:00</TimeSelect>
         </div>
       </div>
     </div>
