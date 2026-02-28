@@ -6,6 +6,7 @@ import { ButtonIcon } from "./components/button-icon";
 import UserSquare from "./assets/icons/user-square.svg?react";
 import TrashIcon from "./assets/icons/trash.svg?react";
 import { TimeSelect } from "./components/time-select";
+import { DatePicker } from "./components/date-picker";
 
 export function App() {
   return (
@@ -46,6 +47,10 @@ export function App() {
           <TimeSelect>10:00</TimeSelect>
           <TimeSelect selected>10:00</TimeSelect>
           <TimeSelect disabled>10:00</TimeSelect>
+        </div>
+
+        <div>
+          <DatePicker className="w-full" />
         </div>
       </div>
     </div>
