@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 export const textVariants = cva("font-sans", {
   variants: {
     variant: {
-      titleLg: "text-3xl leading-6 font-bold",
+      titleLg: "text-2xl leading-6 font-bold",
       titleMd: "text-base leading-6 font-bold",
       titleSm: "text-sm leading-5 font-bold",
       textMd: "text-base leading-6 font-normal",
