@@ -9,18 +9,24 @@
 </p>
 
 <p align="center">
+  <a href="https://hair-day-orcin.vercel.app"><strong>Aplicacao</strong></a>
+  ·
   <a href="https://www.figma.com/community/file/1550912897463432409"><strong>Figma</strong></a>
   ·
-  <a href="#-funcionalidades"><strong>Funcionalidades</strong></a>
+  <a><strong>Funcionalidades</strong></a>
   ·
-  <a href="#-tecnologias"><strong>Tecnologias</strong></a>
+  <a><strong>Tecnologias</strong></a>
   ·
-  <a href="#-como-executar"><strong>Como executar</strong></a>
+  <a><strong>Como executar</strong></a>
 </p>
 
 ---
 
 ![Banner HairDay](./public/hair-day-banner.png)
+
+## Aplicacao online
+
+- Acesse: **[https://hair-day-orcin.vercel.app](https://hair-day-orcin.vercel.app)**
 
 ## Sobre o projeto
 
