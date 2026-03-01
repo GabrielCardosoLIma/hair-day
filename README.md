@@ -1,73 +1,117 @@
-# React + TypeScript + Vite
+<div align="center">
+  <img src="./src/assets/images/logo.svg" alt="HairDay Logo" />
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1 align="center">HairDay - Sistema de Agendamentos</h1>
 
-Currently, two official plugins are available:
+<p align="center">
+  Aplicacao desenvolvida no desafio da formacao <strong>React 2025</strong> da Rocketseat. 🚀
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="center">
+  <a href="https://www.figma.com/community/file/1550912897463432409"><strong>Figma</strong></a>
+  ·
+  <a href="#-funcionalidades"><strong>Funcionalidades</strong></a>
+  ·
+  <a href="#-tecnologias"><strong>Tecnologias</strong></a>
+  ·
+  <a href="#-como-executar"><strong>Como executar</strong></a>
+</p>
 
-## React Compiler
+---
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+![Banner HairDay](./public/hair-day-banner.png)
 
-## Expanding the ESLint configuration
+## Sobre o projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O HairDay e uma aplicacao para gerenciamento de agendamentos. O projeto foi criado para praticar fundamentos essenciais do React:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Gerenciamento de estado
+- Atualizacao imutavel de dados
+- Renderizacao de listas
+- Componentizacao com props
+- Manipulacao de formularios
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Funcionalidades
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Cadastro de agendamento com nome do cliente, data e horario
+- Exclusao de agendamento por icone de lixeira
+- Agrupamento automatico por periodos (manha, tarde e noite)
+- Mensagem de estado vazio por periodo sem agendamentos
+- Persistencia local dos dados no navegador
+
+### Periodos de atendimento
+
+- Manha: 09h as 12h
+- Tarde: 13h as 18h
+- Noite: 19h as 21h
+
+## Analise tecnica da aplicacao
+
+- Arquitetura modular com separacao em `components`, `features`, `hooks`, `models` e `pages`
+- Roteamento com `react-router` para tela principal e pagina de componentes
+- Estado principal encapsulado em hooks customizados para facilitar manutencao
+- Regras de data e filtro por horario implementadas com `dayjs`
+- Interface baseada em utilitarios do Tailwind com variacoes via CVA
+
+## Tecnologias
+
+| Categoria | Tecnologias |
+| --- | --- |
+| Core | React 19, TypeScript, Vite |
+| Roteamento | React Router |
+| Estilizacao | Tailwind CSS 4, class-variance-authority, tailwind-merge |
+| Dados e utilitarios | Day.js, use-local-storage |
+| Build e DX | vite-plugin-svgr, ESLint |
+
+## Estrutura de pastas
+
+```txt
+src
+├─ assets
+├─ components
+├─ features
+├─ hooks
+├─ models
+├─ pages
+├─ App.tsx
+└─ main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Como executar
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# clonar o repositorio
+git clone https://github.com/seu-usuario/hair-day.git
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# entrar na pasta
+cd hair-day
+
+# instalar dependencias
+npm install
+
+# iniciar o projeto
+npm run dev
 ```
+
+Acesse em `http://localhost:5173`.
+
+## Scripts disponiveis
+
+- `npm run dev` - executa em ambiente de desenvolvimento
+- `npm run build` - gera build de producao
+- `npm run preview` - visualiza build localmente
+- `npm run lint` - executa verificacao de lint
+
+## Checklist do desafio
+
+- [x] Projeto com React + Vite + TypeScript
+- [x] Sidebar para criacao de agendamentos
+- [x] Listagem por periodos
+- [x] Adicionar agendamento
+- [x] Remover agendamento
+- [x] Estado vazio por periodo
+
+---
+
+Feito por <strong>Gabriel Cardoso Lima</string> 👋
