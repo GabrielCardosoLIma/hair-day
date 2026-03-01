@@ -22,7 +22,7 @@
 
 ---
 
-![Banner HairDay](./public/hair-day-banner.png)
+![Banner HairDay](./src/assets/images/hair-day-banner.png)
 
 ## Aplicacao online
 
