@@ -5,8 +5,8 @@ import { Text } from "../components/text";
 import { TextInput } from "../components/text-input";
 import { TimeSelect } from "../components/time-select";
 
-import UserSquare from "./assets/icons/user-square.svg?react";
-import TrashIcon from "./assets/icons/trash.svg?react";
+import UserSquare from "../assets/icons/user-square.svg?react";
+import TrashIcon from "../assets/icons/trash.svg?react";
 
 export function PageComponents() {
   return (
