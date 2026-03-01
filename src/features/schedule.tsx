@@ -1,35 +1,47 @@
+import { useState, type ChangeEvent } from "react";
+import useAppointments from "../hooks/use-appointments";
+import dayjs from "dayjs";
+
 import { ScheduleHeader } from "./schedule-header";
 import { PeriodList } from "./period-list";
 import { PeriodItem } from "./period-item";
 import { Text } from "../components/text";
 
-const appointmentsMorning = [
-  { id: 1, time: "11:00", name: "Gabriel Cardoso" },
-  { id: 2, time: "12:00", name: "Gabriel Lima" },
-];
-const appointmentsAfternoon = [
-  { id: 1, time: "13:00", name: "Gabriel Cardoso" },
-  { id: 2, time: "14:00", name: "Gabriel Lima" },
-];
-const appointmentsNight = [
-  { id: 1, time: "19:00", name: "Gabriel Cardoso" },
-  { id: 2, time: "21:00", name: "Gabriel Lima" },
-];
-
 export function Schedule() {
+  const [filteredDate, setFilteredDate] = useState<Date>(
+    dayjs().startOf("day").toDate()
+  );
+
+  const { morningAppointments, afternoonAppointments, nightAppointments } =
+    useAppointments({
+      filters: {
+        date: filteredDate,
+      },
+    });
+
+  function handleFilteredDateChange(event: ChangeEvent<HTMLInputElement>) {
+    if (!event.target.value) return;
+
+    const date = dayjs(event.target.value).startOf("day").toDate();
+    setFilteredDate(date);
+  }
+
   return (
     <div className="w-full py-20">
       <div className="mx-auto max-w-170.5 space-y-8">
-        <ScheduleHeader />
+        <ScheduleHeader
+          filteredDate={filteredDate}
+          onChangeFilteredDate={handleFilteredDateChange}
+        />
 
         <div className="space-y-3">
           <PeriodList period="morning">
-            {appointmentsMorning.length > 0 ? (
-              appointmentsMorning.map((appointment) => (
+            {morningAppointments.length > 0 ? (
+              morningAppointments.map((appointment) => (
                 <PeriodItem
                   key={appointment.id}
                   id={Math.random().toString(36).substring(2, 9)}
-                  customerName={appointment.name}
+                  customerName={appointment.customerName}
                   time={appointment.time}
                 />
               ))
@@ -41,12 +53,12 @@ export function Schedule() {
           </PeriodList>
 
           <PeriodList period="afternoon">
-            {appointmentsAfternoon.length > 0 ? (
-              appointmentsAfternoon.map((appointment) => (
+            {afternoonAppointments.length > 0 ? (
+              afternoonAppointments.map((appointment) => (
                 <PeriodItem
                   key={appointment.id}
                   id={Math.random().toString(36).substring(2, 9)}
-                  customerName={appointment.name}
+                  customerName={appointment.customerName}
                   time={appointment.time}
                 />
               ))
@@ -58,12 +70,12 @@ export function Schedule() {
           </PeriodList>
 
           <PeriodList period="night">
-            {appointmentsNight.length > 0 ? (
-              appointmentsNight.map((appointment) => (
+            {nightAppointments.length > 0 ? (
+              nightAppointments.map((appointment) => (
                 <PeriodItem
                   key={appointment.id}
                   id={Math.random().toString(36).substring(2, 9)}
-                  customerName={appointment.name}
+                  customerName={appointment.customerName}
                   time={appointment.time}
                 />
               ))
