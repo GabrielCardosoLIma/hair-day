@@ -8,6 +8,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import ChevronDown from "../assets/icons/caret-down.svg?react";
 import Calendar from "../assets/icons/calendar.svg?react";
+import dayjs from "dayjs";
 
 export const datePickerVariantsContainer = cva(
   "cursor-pointer focus-within:border-yellow-dark transition-colors p-3 rounded-xl border border-gray-500 flex items-center justify-center gap-2"
@@ -62,7 +63,7 @@ export function DatePicker({
             ),
           })
         )}
-        min={new Date().toISOString().split("T")[0]}
+        min={dayjs().format("YYYY-MM-DD")}
         {...props}
       />
 

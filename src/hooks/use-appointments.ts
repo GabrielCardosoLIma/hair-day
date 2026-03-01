@@ -27,7 +27,7 @@ type AppointmentGroups = {
   usedTimeSlots: string[];
 };
 
-export default function useAppointments({ filters }: Props) {
+export function useAppointments({ filters }: Props) {
   const [appointments] = useLocalStorage<Appointment[]>(APPOINTMENTS_KEY, []);
 
   const { morning, afternoon, night, usedTimeSlots } =

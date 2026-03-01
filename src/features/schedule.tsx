@@ -1,5 +1,5 @@
 import { useState, type ChangeEvent } from "react";
-import useAppointments from "../hooks/use-appointments";
+import { useAppointments } from "../hooks/use-appointments";
 import dayjs from "dayjs";
 
 import { ScheduleHeader } from "./schedule-header";
@@ -40,7 +40,7 @@ export function Schedule() {
               morningAppointments.map((appointment) => (
                 <PeriodItem
                   key={appointment.id}
-                  id={Math.random().toString(36).substring(2, 9)}
+                  id={appointment.id}
                   customerName={appointment.customerName}
                   time={appointment.time}
                 />
@@ -57,7 +57,7 @@ export function Schedule() {
               afternoonAppointments.map((appointment) => (
                 <PeriodItem
                   key={appointment.id}
-                  id={Math.random().toString(36).substring(2, 9)}
+                  id={appointment.id}
                   customerName={appointment.customerName}
                   time={appointment.time}
                 />
@@ -74,7 +74,7 @@ export function Schedule() {
               nightAppointments.map((appointment) => (
                 <PeriodItem
                   key={appointment.id}
-                  id={Math.random().toString(36).substring(2, 9)}
+                  id={appointment.id}
                   customerName={appointment.customerName}
                   time={appointment.time}
                 />
