@@ -1,6 +1,6 @@
-import { Logo } from "../features/logo";
-import { Schedule } from "../features/schedule";
-import { SideBar } from "../features/sidebar";
+import { Logo } from "../features/appointments/logo";
+import { Schedule } from "../features/appointments/schedule";
+import { SideBar } from "../features/appointments/sidebar";
 
 export function PageHome() {
   return (

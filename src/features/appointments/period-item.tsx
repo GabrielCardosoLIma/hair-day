@@ -1,8 +1,8 @@
-import { Text } from "../components/text";
-import { ButtonIcon } from "../components/button-icon";
+import { Text } from "../../components/text";
+import { ButtonIcon } from "../../components/button-icon";
 
 import Trash from "../assets/icons/trash.svg?react";
-import { useAppointment } from "../hooks/use-appoitment";
+import { useAppointment } from "../../hooks/use-appoitment";
 
 interface PeriodItemProps {
   id: string;

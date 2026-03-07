@@ -1,11 +1,11 @@
 import { useState, type ChangeEvent } from "react";
-import { useAppointments } from "../hooks/use-appointments";
+import { useAppointments } from "../../hooks/use-appointments";
 import dayjs from "dayjs";
 
 import { ScheduleHeader } from "./schedule-header";
 import { PeriodList } from "./period-list";
 import { PeriodItem } from "./period-item";
-import { Text } from "../components/text";
+import { Text } from "../../components/text";
 
 export function Schedule() {
   const [filteredDate, setFilteredDate] = useState<Date>(

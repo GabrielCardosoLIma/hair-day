@@ -1,5 +1,5 @@
-import { Icon } from "../components/icon";
-import { Text } from "../components/text";
+import { Icon } from "../../components/icon";
+import { Text } from "../../components/text";
 
 import SunHorizon from "../assets/icons/sun-horizon.svg?react";
 import CloudSun from "../assets/icons/cloud-sun.svg?react";
