@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react";
-import { Text } from "../../components/text";
-import { DatePicker } from "../../components/date-picker";
+import { Text } from "../components/text";
+import { DatePicker } from "../components/date-picker";
 
 type Props = {
   filteredDate: Date;

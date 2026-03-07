@@ -1,13 +1,13 @@
 import { useState, type SubmitEvent } from "react";
-import { DatePicker } from "../../components/date-picker";
-import { Text } from "../../components/text";
-import { TextInput } from "../../components/text-input";
-import { TimeSelect } from "../../components/time-select";
+import { DatePicker } from "../components/date-picker";
+import { Text } from "../components/text";
+import { TextInput } from "../components/text-input";
+import { TimeSelect } from "../components/time-select";
 
 import UserSquare from "../assets/icons/user-square.svg?react";
-import { Button } from "../../components/button";
-import { useAppointments } from "../../hooks/use-appointments";
-import { useAppointment } from "../../hooks/use-appoitment";
+import { Button } from "../components/button";
+import { useAppointments } from "../hooks/use-appointments";
+import { useAppointment } from "../hooks/use-appoitment";
 import dayjs from "dayjs";
 
 const morningTimeSlots = ["09:00", "10:00", "11:00", "12:00"];
