@@ -9,15 +9,9 @@
 </p>
 
 <p align="center">
-  <a href="https://hair-day-orcin.vercel.app"><strong>Aplicacao</strong></a>
+  <a href="https://hair-day-orcin.vercel.app"><strong>Aplicação</strong></a>
   ·
   <a href="https://www.figma.com/community/file/1550912897463432409"><strong>Figma</strong></a>
-  ·
-  <a><strong>Funcionalidades</strong></a>
-  ·
-  <a><strong>Tecnologias</strong></a>
-  ·
-  <a><strong>Como executar</strong></a>
 </p>
 
 ---
@@ -54,7 +48,7 @@ O HairDay e uma aplicacao para gerenciamento de agendamentos. O projeto foi cria
 
 ## Analise tecnica da aplicacao
 
-- Arquitetura modular com separacao em `components`, `features`, `hooks`, `models` e `pages`
+- Arquitetura modular com separacao em `components`, `hooks`, `models` e `pages`
 - Roteamento com `react-router` para tela principal e pagina de componentes
 - Estado principal encapsulado em hooks customizados para facilitar manutencao
 - Regras de data e filtro por horario implementadas com `dayjs`
@@ -76,7 +70,6 @@ O HairDay e uma aplicacao para gerenciamento de agendamentos. O projeto foi cria
 src
 ├─ assets
 ├─ components
-├─ features
 ├─ hooks
 ├─ models
 ├─ pages
@@ -88,7 +81,7 @@ src
 
 ```bash
 # clonar o repositorio
-git clone https://github.com/seu-usuario/hair-day.git
+git clone https://github.com/GabrielCardosoLIma/hair-day.git
 
 # entrar na pasta
 cd hair-day
@@ -99,8 +92,6 @@ npm install
 # iniciar o projeto
 npm run dev
 ```
-
-Acesse em `http://localhost:5173`.
 
 ## Scripts disponiveis
 
